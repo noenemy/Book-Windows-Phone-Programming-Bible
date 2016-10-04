@@ -1,0 +1,55 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Launchers.EmailCompose"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="email compose" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,22,0,0" Name="textBlock1" Text="받는사람" VerticalAlignment="Top" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="-4,47,0,0" Name="txtTo" Text="user@example.com" VerticalAlignment="Top" Width="462" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="9,125,0,0" Name="textBlock2" Text="참조" VerticalAlignment="Top" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="-3,146,0,0" Name="txtCC" Text="user2@example.com" VerticalAlignment="Top" Width="460" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,227,0,0" Name="textBlock3" Text="제목" VerticalAlignment="Top" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="-3,251,0,0" Name="txtSubject" Text="" VerticalAlignment="Top" Width="460" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="9,328,0,0" Name="textBlock4" Text="내용" VerticalAlignment="Top" />
+            <TextBox Height="158" HorizontalAlignment="Left" Margin="-4,346,0,0" Name="txtBody" Text="" VerticalAlignment="Top" Width="460" AcceptsReturn="True" />
+            <Button Content="보내기" Height="72" HorizontalAlignment="Left" Margin="296,510,0,0" Name="btnSend" VerticalAlignment="Top" Width="160" Click="btnSend_Click" />
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

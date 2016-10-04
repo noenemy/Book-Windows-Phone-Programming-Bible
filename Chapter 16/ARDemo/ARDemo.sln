@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010 Express for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARDemo", "ARDemo\ARDemo.csproj", "{09EFDCE2-2A02-482E-87A8-2274A7ADABC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09EFDCE2-2A02-482E-87A8-2274A7ADABC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09EFDCE2-2A02-482E-87A8-2274A7ADABC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09EFDCE2-2A02-482E-87A8-2274A7ADABC4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{09EFDCE2-2A02-482E-87A8-2274A7ADABC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09EFDCE2-2A02-482E-87A8-2274A7ADABC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09EFDCE2-2A02-482E-87A8-2274A7ADABC4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

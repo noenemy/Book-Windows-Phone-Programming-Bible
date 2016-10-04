@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="MyCamera.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="728" d:DesignHeight="480"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="640" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <!-- 카메라 화면 -->
+        <Rectangle Width="640" Height="480" HorizontalAlignment="Left">
+            <Rectangle.Fill>
+                <VideoBrush x:Name="cameraBrush" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Name="txtMessage" Foreground="Black" />
+        
+        <!-- 오버레이 -->
+        <Canvas Name="canvasOverlay" Visibility="Collapsed">           
+            <Ellipse Canvas.Left="50" Canvas.Top="80" Height="100" Name="ellipse1" Stroke="Black" StrokeThickness="1" Width="100" Fill="Yellow" />
+            <Rectangle Canvas.Left="80" Canvas.Top="130" Height="100" Name="rect1" Stroke="Yellow" StrokeThickness="3" Width="120" Fill="Blue" />
+        </Canvas>
+
+        <!-- 카메라 제어 버튼 -->
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="셔터"/>
+            <Button x:Name="btnShutter" Content="SH" Click="btnShutter_Click" Hold="btnShutter_Hold" />
+            <TextBlock Text="플래시"/>
+            <Button x:Name="btnFlash" Content="On" Click="btnFlash_Click" />
+            <TextBlock Text="해상도"/>
+            <Button x:Name="btnResolution" Content="1" Click="btnResolution_Click" />
+            <TextBlock Text="오버레이"/>
+            <Button x:Name="btnOverlay" Content="Off" Click="btnOverlay_Click" />            
+        </StackPanel>
+
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
