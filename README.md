@@ -1,5 +1,5 @@
 # Book-Windows-Phone-Programming-Bible
-Code samples for "Windows Phone 7.5 Programming Bible" which was published in 2011. You can see the details from http://www.yes24.com/24/Goods/6020664?Acode=101.
+Code samples for my publication "Windows Phone 7.5 Programming Bible" which was published in 2011. You can see the details from http://www.yes24.com/24/Goods/6020664?Acode=101.
 
 ![Cover Image](http://image.auction.co.kr/itemimage/d9/74/0b/d9740bf53.jpg?raw=true "Windows Phone 7.5 Programming Bible")
 
@@ -29,3 +29,6 @@ Code samples for "Windows Phone 7.5 Programming Bible" which was published in 20
 * Chapter 22. Multitasking
 * Chapter 23. Marketplace
 * Appendix. Windows Phone Developer Tool
+
+# License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
